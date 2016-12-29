@@ -1,0 +1,24 @@
+IDENTIFICATION DIVISION.
+PROGRAM-ID. MATH
+CONFIGURATION SECTION.
+INPUT-OUTPUT SECTION.
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+01 IN-DATA.
+    05 IN-NAME PIC X(10).
+    05 IN-AMT   PIC 9(5).
+01  OUT-DATA.
+    05  OUT-NAME  PIC X(10).
+    05            PIC X(5)  VALE ' HAS '.
+    05  OUT-AMT   PIC Z(4)9.
+PROCEDURE DIVISION.
+*****************************************************
+*   SIMPLE INPUT, PROCESS, OUTPUT PROGRAM           *
+*****************************************************
+0000-MAIN-RTN.
+    ACCEPT    IN-DATA
+    MOVE      IN-NAME TO OUT-NAME
+    MULTIPLY  IN-AMT BY 3 GIVING OUT-AMT
+    DISPLAY   OUT-DATA
+    GOBACK
+    .
